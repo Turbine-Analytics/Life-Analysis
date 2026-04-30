@@ -27,7 +27,7 @@ V levém panelu můžete ovlivnit výpočet a definovat datové zdroje:
 * **Zvolený kanál pro VÝPOČET**: Zde vyberte kanál se "zobecněným zatížením". Typicky se jedná o signál vibrací a absolutní (ložiskových), nebo relativních (hřidelových), přednastaven je kanal relativních vibrací (např. TG3 VIBRO TXD [µm]), ze kterého se počítá únavové poškození.
 * **Zvolený kanál pro ZOBRAZENÍ**: Tento kanál slouží jako referenční osa pro histogramy. Obvykle se volí činný výkon (MW), aby bylo vidět, při jakém provozním zatížení stroje dochází k největší spotřebě životnosti. Velmi duležitý je spotřeba životnosti při nulovém výkonu. Tata hodnota spotřeby životnosti souvisí s startem a odstavením stroje.
 ### Nastavení parametrů
-* **Mocnina m**: Exponent únavové křivky (přednastaveno $m=3.0$, může se pohybovat v rozsahu $m=3.0-5.0$).
+* **Mocnina m**: Exponent únavové křivky, který přímo souvisí se sklonem S-N křivky materiálu. (přednastaveno $m=3.0$, může se pohybovat v rozsahu $m=3.0-5.0$).
 * **Mez citlivosti**: Hodnota, pod kterou je poškození považováno za nulové vlivem měřeného šumu. Tato mez by měla být nastavena nad hodnotu měřených vibrací pri stojícím stroji.
 * **Životnost [roky]**: Celková projektovaná životnost pro kalibraci koeficientů. Běžná hodnota se bude pohybovat v desítkách let. (Přednastaveno 20 let)
 
