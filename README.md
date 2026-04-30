@@ -33,7 +33,8 @@ V levém panelu můžete ovlivnit výpočet a definovat datové zdroje:
 ### Analytické grafy
 Aplikace nabízí několik pohledů:
 1. **Kumulativní spotřeba**: Ukazuje, jak se únava sčítá v čase.
-2. **Podíl na spotřebě**: Histogram, který identifikuje, při jakém výkonu (MW) dochází k největšímu poškozování v průběhu měřených zpracovavaných dat. Obvykle bude maximální spotřeba životnosti při nulovém výkonu, toto souvisí se zvýšeným namáháním při startu a při odstavením stroje.
+2. **Spotřeba životnosti**: Ukazuje spotřebu životnosti v závislosti na čase.
+3. **Podíl na spotřebě**: Histogram, který identifikuje, při jakém výkonu (MW) dochází k největšímu poškozování v průběhu měřených zpracovavaných dat. Obvykle bude maximální spotřeba životnosti při nulovém výkonu, toto souvisí se zvýšeným namáháním při startu a při odstavením stroje.
 ## 🔬 Metodika výpočtu
 Program implementuje lineární teorii kumulace poškození (Palmgren-Miner). Spotřeba životnosti $L_i$ pro každý datový bod je definována jako:
 
