@@ -42,4 +42,4 @@ Program implementuje lineární teorii kumulace poškození (Palmgren-Miner). Sp
 $$L_i = \begin{cases} A_i^m \cdot C & \text{pokud } A_i > \text{mez} \end{cases}$$
 $$L_i = \begin{cases} 0 & \text{pokud } A_i \leq \text{mez} \end{cases}$$
 
-Kde $A_i$ je amplituda signálu a $C$ je konstanta normalizovaná na celkovou dobu provozu.
+Kde $A_i$ je amplituda signálu a $C$ je konstanta normalizovaná na celkovou dobu životnosti.
