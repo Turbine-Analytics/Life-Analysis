@@ -19,13 +19,13 @@ Software pro expertní hodnocení únavového poškození a spotřeby životnost
 ![Náhled aplikace](docs/img/obr1.png)
 ### Načtení dat
 V horním menu zvolte **Soubor -> Načti data**. Program podporuje:
-* **TDMS**: Binární formát z NI LabVIEW. Předppokladá že v souboru je kanal "Time".
+* **TDMS**: Binární formát z NI LabVIEW. Předpokladá že v souboru je kanal "Time".
 * **CSV**: Textová data (detekuje středníky i čárky), první sloupec je čas.
 
 ### Výběr dat
 V levém panelu můžete ovlivnit výpočet a definovat datové zdroje:
 * **Zvolený kanál pro VÝPOČET**: Zde vyberte kanál se "zobecněným zatížením". Typicky se jedná o signál vibrací a absolutní (ložiskových), nebo relativních (hřidelových), přednastaven je kanal relativních vibrací (např. TG3 VIBRO TXD [µm]), ze kterého se počítá únavové poškození.
-* **Zvolený kanál pro ZOBRAZENÍ**: Tento kanál slouží jako referenční osa pro histogramy. Obvykle se volí činný výkon (MW), aby bylo vidět, při jakém provozním zatížení stroje dochází k největší spotřebě životnosti. Velmi duležitý je spotřeba životnosti při nulovém výkonu. Tata hodnota spotřeby životnosti souvisí s startem a odstavením stroje.
+* **Zvolený kanál pro ZOBRAZENÍ**: Tento kanál slouží jako referenční osa pro histogramy. Obvykle se volí činný výkon (MW), aby bylo vidět, při jakém provozním zatížení stroje dochází k největší spotřebě životnosti. Velmi duležitý je spotřeba životnosti při nulovém výkonu. Tato hodnota spotřeby životnosti souvisí s startem a odstavením stroje.
 ### Nastavení parametrů
 * **Mocnina m**: Exponent únavové křivky, který přímo souvisí se sklonem S-N křivky materiálu. (přednastaveno $m=3.0$, může se pohybovat v rozsahu $m=3.0-5.0$).
 * **Mez citlivosti**: Hodnota, pod kterou je poškození považováno za nulové vlivem měřeného šumu. Tato mez by měla být nastavena nad hodnotu měřených vibrací pri stojícím stroji.
@@ -43,3 +43,18 @@ $$L_i = \begin{cases} A_i^m \cdot C & \text{pokud } A_i > \text{mez} \end{cases}
 $$L_i = \begin{cases} 0 & \text{pokud } A_i \leq \text{mez} \end{cases}$$
 
 Kde $A_i$ je amplituda signálu a $C$ je konstanta normalizovaná na celkovou dobu životnosti.
+
+## 📊 Vstupní data a jejich úprava
+
+Součástí projektu jsou v adresáři data reálná provozní data naměřená na **velkém vodním díle**. Tato data reprezentují klíčové parametry pro diagnostiku stavu soustrojí a poskytují nazornou představu o programu:
+
+*   **Vibrodiagnostika**: Hodnoty měřené na vodícím ložisku turbíny, absolutní ložiskové vibraci a raletivní hřídelové posunutí.
+*   **Provozní parametry**: Údaje o otevření rozváděcího kola (**OK**) a oběžného kola (**RK**).
+*   **Výkon**: Činný výkon stroje v $MW$.
+
+### Normalizace dat
+Všechny vstupní signály v přiložených vzorových souborech jsou **normalizovány do jednotného rozsahu 0–100**. Tato úprava umožňuje snadné srovnání různých fyzikálních veličin v jednom grafu a zároveň chrání citlivá provozní data.
+
+Pro normalizaci byl použit vztah:
+
+$$data_{norm} = \frac{data - data_{min}}{data_{max} - data_{min}} \cdot 100$$
