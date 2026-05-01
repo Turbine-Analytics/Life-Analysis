@@ -46,7 +46,7 @@ Kde $A_i$ je amplituda signálu a $C$ je konstanta normalizovaná na celkovou do
 
 ## 📊 Vstupní data a jejich úprava
 
-Součástí projektu jsou v adresáři data reálná provozní data naměřená na **velkém vodním díle**. Tato data reprezentují klíčové parametry pro diagnostiku stavu soustrojí a poskytují nazornou představu o programu:
+Součástí projektu jsou v adresáři data, reálná provozní data naměřená na **velkém vodním díle**. Tato data reprezentují klíčové parametry pro diagnostiku stavu soustrojí a poskytují nazornou představu o programu:
 
 *   **Vibrodiagnostika**: Hodnoty měřené na vodícím ložisku turbíny, absolutní ložiskové vibraci a raletivní hřídelové posunutí.
 *   **Provozní parametry**: Údaje o otevření rozváděcího kola (**OK**) a oběžného kola (**RK**).
